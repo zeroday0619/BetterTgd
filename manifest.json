@@ -1,12 +1,20 @@
 {
-    "manifest_version": 2,
     "name": "BetterTgd",
     "version": "1.0.0",
-    "permissions": ["tabs"],
+    "author": "Misaka Mikoto (zeroday0619)",
+    "permissions": ["tabs", "*://*/*"],
     "background": {
-      "scripts": ["lib/core.js"],
+      "scripts": [
+        "polyfill/browser-polyfill.min.js",
+        "lib/core.js"
+      ],
       "persistent": true
     },
-    "web_accessible_resources": ["assets/*"],
-    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "zeroday0619@kakao.com",
+        "strict_min_version": "63.0"
+      }
+    },
+    "manifest_version": 2
 }
