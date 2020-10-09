@@ -11,8 +11,6 @@ function RepleaceHeaderTitleHref(OnAction: boolean){
 
 browser.tabs.onUpdated.addListener(async (tabId, info, tab) => {
     const url: string = info.url || tab.url;
-    const previousTabUrl: string = previousTabUrls[tabId];
-
     const checkUrl: boolean = url.startsWith("https://tgd.kr/s/")
 
     let scriptPath = RepleaceHeaderTitleHref(checkUrl);
