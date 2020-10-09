@@ -17,8 +17,8 @@ echo Done.
 echo
 
 echo Building BetterTgd Archive....
-zip -r BetterTgd.zip * --exclude=*.git* --exclude=*node_modules* --exclude=*.DS_store --exclude=*.sh
+zip -r BetterTgd.zip * --exclude=*.git* --exclude=*node_modules* --exclude=*.DS_store --exclude=*.sh --exclude=*showcase/BetterTgd-logo.psd
 
 echo Building Archive for Firefox Add-on Team...
-zip -r BetterTgd.MisakaMikoto.moe.zip * --exclude=*.DS_store
+zip -r BetterTgd.MisakaMikoto.moe.zip * --exclude=*.DS_store --exclude=*showcase/BetterTgd-logo.psd
 cp BetterTgd.zip BetterTgd@MisakaMikoto.moe.xpi
